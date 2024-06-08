@@ -6,6 +6,6 @@ export class AppService {
   constructor(private readonly config:ConfigService){}
   getHello(): string {
     
-    return this.config.get<string>("PORT")
+    return process.env.PORT
   }
 }
